@@ -1,3 +1,10 @@
+@layer colors{
+    :root{
+        --c-blue: #006eff;
+        --c-blue-light: #c3e1ff;
+    }
+}
+
 @layer global {
 
     *,
@@ -8,10 +15,11 @@
 
     body {
         font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
+        background-color: #000116;
         color: #333;
         margin: 0;
         padding: 20px;
+        display: flex;
     }
 
     a {
@@ -40,4 +48,31 @@
             list-style-type: none;
         }
     }
+}
+
+#color-sq {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 10rem;
+    color: white;
+    width: 1000px;
+    height: 500px;
+    background-color: rgb(0, 23, 52);
+    border-radius: 25px;
+    border: 5px solid rgb(47, 116, 255);
+    box-shadow: 0px 0px 200px rgba(0, 85, 255, 0.75);
+    margin: 20px auto;
+    transition: 0.3s ease-in-out;
+}
+
+#color-sq:hover {
+    background-color: var(--c-blue-light);
+    color: var(--c-blue);
+    box-shadow: 0px 0px 200px rgba(0, 110, 255, 0.75);
 }
