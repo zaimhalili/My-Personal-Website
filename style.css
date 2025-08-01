@@ -2,12 +2,12 @@
 
 @layer colors {
     :root {
-        --c-blue: #006eff;
-        --c-blue-light: #c3e1ff;
+        /* --c-blue: #006eff; */
+        /* --c-blue-light: #c3e1ff; */
         --raisin-black: #1b1725ff;
-        --oxford-blue: #01233dff;
+        /* --oxford-blue: #01233dff;
         --lapis-lazuli: #035e7bff;
-        --atomic-tangerine: #fa8c4cff;
+        --atomic-tangerine: #fa8c4cff; */
         --french-gray: #c7cedbff;
 
         --black: #000505ff;
@@ -63,7 +63,6 @@
         background-color: var(--french-gray);
         margin: 0;
         padding: 0;
-        display: flex;
     }
 
     a {
@@ -99,11 +98,7 @@
 
 @layer beginning {
     body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
+        height: 991px;
     }
 
     h1 {
@@ -117,5 +112,65 @@
         color: var(--oxford-blue);
         text-align: center;
         max-width: 600px;
+    }
+
+    #nav-bar {
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 100px;
+        background-color: bisque;
+    }
+
+    #nav-bar_logo {
+        width: 100px;
+        height: 100px;
+        display: inherit;
+        justify-self: flex-start;
+        align-self: center;
+    }
+
+    #contact_gmail_anchor {
+        color: var(--raisin-black);
+        font-family: 'inter', sans-serif;
+        font-size: 1.2rem;
+        display: flex;
+        justify-self: flex-end;
+        align-self: center;
+        width: 100px;
+        height: 70px;
+        background-color: transparent;
+        border: 2px solid var(--raisin-black);
+        overflow: hidden;
+    }
+
+    #button_fill_contact {
+        width: 100px;
+        height: 70px;
+        background-color: black;
+        overflow: hidden;
+    }
+
+    #hook {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        justify-self: flex-start;
+        align-self: center;
+        height: 500px;
+        width: 1000px;
+    }
+
+    #home-title {
+        display: flex;
+
+    }
+
+    #project-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
     }
 }
