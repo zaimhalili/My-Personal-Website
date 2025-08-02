@@ -261,7 +261,7 @@
         height: (100% / 3);
     }
 
-    .case-no{
+    .case-no {
         font-family: 'Inter', sans-serif;
         font-size: 15px;
         font-weight: 600;
@@ -271,7 +271,7 @@
         list-style-type: disc;
     }
 
-    .case-title{
+    .case-title {
         font-size: 50px;
         letter-spacing: -4px;
         font-weight: 500;
@@ -290,6 +290,29 @@
         display: flex;
         align-self: center;
         justify-self: flex-start;
+    }
+
+    .view-case {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--oxford-blue);
+        border: 2px solid var(--oxford-blue);
+        height: 50px;
+        width: 200px;
+        display: flex;
+        align-self: center;
+        justify-self: flex-start;
+        align-items: center;
+        justify-content: center;
+        border-radius: 45px;
+        margin-top: 20px;
+        transition: 0.3s;
+    }
+
+    .view-case:hover {
+        background-color: var(--oxford-blue);
+        color: var(--white);
     }
 
     .img-container {
