@@ -341,9 +341,8 @@
         width: 100%;
     }
 
-    .img-container:hover img {
-        border-radius: 35px;
-
+    .project-img-display:hover {
+        border-radius: 45px;
     }
 }
 
