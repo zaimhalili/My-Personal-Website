@@ -107,7 +107,7 @@
 }
 
 
-@layer beginning {
+@layer hook_and_projects_styles {
     body {
         height: 3000px;
         width: 100%;
@@ -115,10 +115,7 @@
     }
 
     p {
-        font-size: 1.2rem;
         color: var(--oxford-blue);
-        text-align: center;
-        max-width: 600px;
     }
 
     #nav-bar {
@@ -191,10 +188,10 @@
 
     #hook {
         height: 550px;
-        width: calc(100% - 240px);
+        width: calc(100% - 160px);
         margin-top: 240px;
-        margin-left: 120px;
-        margin-right: 120px;
+        margin-left: 80px;
+        margin-right: 80px;
         padding: 0;
         flex-direction: column;
         word-break: keep-all;
@@ -237,7 +234,6 @@
         justify-self: center;
         align-self: center;
         flex-direction: column;
-
         height: 2400px;
         width: 1200px;
         margin-top: 100px;
@@ -246,10 +242,12 @@
     .project {
         border-top: 2px solid var(--raisin-black);
         display: flex;
-        width: 110vw;
         height: 840px;
-        margin-right: 120px;
-        margin-left: 120px;
+        width: calc(100vw - 160px);
+        margin-right: 80px;
+        margin-left: 80px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     .c-left {
@@ -257,8 +255,10 @@
         align-items: center;
         flex-direction: column;
         justify-content: flex-start;
-        width: 50%;
-        height: (100% / 3);
+        width: 55%;
+        height: 850px;
+        margin-bottom: 40px;
+        margin-top: 40px;
     }
 
     .case-no {
@@ -269,27 +269,34 @@
         justify-self: flex-start;
         align-self: flex-start;
         list-style-type: disc;
+        padding: 0;
+        margin-bottom: 220px;
+        margin-left: 0;
+        color: var(--space-cadet);
     }
 
     .case-title {
-        font-size: 50px;
+        font-size: 55px;
         letter-spacing: -4px;
-        font-weight: 500;
+        font-weight: 400;
         display: flex;
-        align-self: center;
+        align-self: flex-start;
         justify-self: flex-start;
+        padding: 0;
+        margin-bottom: 20px;
     }
 
     .case-description {
-        font-size: 20px;
-        font-weight: 400;
+        font-size: 25px;
+        font-family: 'special-gothic-condensed-one-regular', sans-serif;
+        font-weight: lighter;
         color: var(--space-cadet);
         width: 600px;
-        margin-top: 20px;
-        margin-bottom: 20px;
         display: flex;
-        align-self: center;
+        align-self: flex-start;
         justify-self: flex-start;
+        text-align: left;
+        margin-top: -10px;
     }
 
     .view-case {
@@ -301,7 +308,7 @@
         height: 50px;
         width: 200px;
         display: flex;
-        align-self: center;
+        align-self: flex-start;
         justify-self: flex-start;
         align-items: center;
         justify-content: center;
@@ -319,12 +326,73 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--white);
+        background-color: transparent;
         height: 850px;
-        width: 800px;
-        padding-left: 40px;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        width: 45%;
         border-left: 2px solid var(--raisin-black);
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .project-img-display {
+        transition: 0.3s ease-in-out;
+        padding: 0px 0px 0px 50px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .img-container:hover img {
+        border-radius: 35px;
+
+    }
+}
+
+@layer bottom {
+    #personal-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        width: 100%;
+        background-color: var(--raisin-black);
+        color: var(--white);
+    }
+
+    #personal-image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 150px;
+    }
+
+    #personal-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    #personal-description{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 100px;
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        text-align: center;
+        color: var(--white);
+    }
+
+    #contact-me-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-start;
+        justify-self: center;
+        height: 100px;
+        width: 100%;
     }
 }
