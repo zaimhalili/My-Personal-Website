@@ -4,8 +4,11 @@ Remaining:
     -compact margins
     -Images and icons at the bottom
     -Hidden image display when hovering
-    -Media Queries & Compatibility
+    -Media Queries & Browser Compatibility
     -Other pages
+    -Dark Mode Button
+    -Translate to Italian
+    -Animations with JS or CSS only; keyframes
 
 
 To be checked after finishing:
