@@ -434,22 +434,26 @@
         background-color: transparent;
         border-radius: 50%;
         border: 1px solid var(--oxford-blue);
-
         color: var(--raisin-black);
+        transition: 0.25s;
     }
 
-    .fa-brands.fa-instagram {
+    .fa-brands.fa-instagram,
+    .fa-brands.fa-linkedin-in,
+    .fa-brands.fa-facebook-f {
         display: flex;
         padding: 0;
-        font-size: 30px;
+        font-size: 35px;
         color: var(--oxford-blue);
-        transition: transform 0.3s ease-in-out;
+        transition: 0.25s;
     }
 
-    .social-media-icon:hover .fa-brands.fa-instagram {
-        transform: scale(1.1);
-        background-color: var(--raisin-black);
+    .social-media-icon:hover .fa-brands {
         color: var(--white);
+    }
+
+    .social-media-icon:hover {
+        background-color: var(--oxford-blue);
     }
 
     #final-hook {

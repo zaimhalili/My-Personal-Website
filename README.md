@@ -9,6 +9,7 @@ Remaining:
     -Dark Mode Button
     -Translate to Italian
     -Animations with JS or CSS only; keyframes
+    -Little design icons like arrows or cute stickers
 
 
 To be checked after finishing:
