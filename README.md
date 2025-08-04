@@ -1,4 +1,4 @@
-Remaining:
+<Remaining:>
     -change text to match my characteristics
     -global font, font colors and sizes
     -compact margins & CSS Code
@@ -11,7 +11,6 @@ Remaining:
     -Little design icons like arrows or cute stickers
     -At the bottom a button that scrolls up to home: Turn Back to Home
 
-
-To be checked after finishing:
-    -Github deployement dimensions and proprotions
+<To be checked after finishing:>
+    -Github deployement dimensions and proportions
     -Fonts & Images
