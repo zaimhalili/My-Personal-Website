@@ -18,38 +18,27 @@
     }
 }
 
-@layer fonts {
-    @font-face {
-
-        /* Header - Barrio Regular */
-        .barrio-regular {
-            font-family: "Barrio", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            font-style: normal;
-        }
-
-        .special-gothic-condensed-one-regular {
-            font-family: "Special Gothic Condensed One", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .inter-regular {
-            font-family: "Inter", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .lexend-regular {
-            font-family: "Lexend", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-        }
-    }
-}
-
 @layer global {
+
+    :root {
+        --nav-bar_height: 120px;
+        --nav-bar-logo_width-height: 80px;
+        --nav-bar-logo_margin-left: 120px;
+        --scrollToBottom_width: 150px;
+        --scrollToBottom_height: 60px;
+        --scrollToBottom_margin-right: 120px;
+        --button_fill_contact_height: 100px;
+        --button_fill_contact_width: 200px;
+        --contact_text_height: 60px;
+        --contact_text_width: 100%;
+        --hook_height: 550px;
+        --hook_width: calc(100% - 160px);
+        --hook-margin: 240px 80px 0 80px;
+        --home-title_height: 300px;
+        --home-title_width: 70%;
+        --home-title_letter_spacing: -5px;
+
+    }
 
     *,
     ::before,
@@ -74,20 +63,18 @@
         max-width: 100%;
     }
 
-    h1,
-    h2,
-    h3 {
+    h1 {
         margin: 0;
         line-height: 1.1;
+        font-family: "Special Gothic Condensed One", sans-serif;
     }
 
-    h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        font-family: 'Lexend', sans-serif;
+        font-family: "Lexend", sans-serif;
         color: var(--raisin-black);
     }
 
@@ -110,7 +97,7 @@
 
 @layer hook_and_projects_styles {
     #nav-bar {
-        height: 120px;
+        height: var(--nav-bar_height);
         width: 100%;
         display: flex;
         align-items: center;
@@ -120,24 +107,24 @@
     }
 
     #nav-bar_logo {
-        width: 80px;
-        height: 80px;
+        width: var(--nav-bar-logo_width-height);
+        height: var(--nav-bar-logo_width-height);
         display: inherit;
         justify-self: flex-start;
         align-self: center;
-        margin-left: 120px;
+        margin-left: var(--nav-bar-logo_margin-left);
     }
 
     #scrollToBottom {
         display: flex;
         justify-items: flex-end;
         align-self: center;
-        width: 150px;
-        height: 60px;
+        width: var(--scrollToBottom_width);
+        height: var(--scrollToBottom_height);
         background-color: var(--raisin-black);
         border: 1px solid var(--raisin-black);
         overflow: hidden;
-        margin-right: 120px;
+        margin-right: var(--scrollToBottom_margin-right);
         border-radius: 45px;
     }
 
@@ -146,8 +133,8 @@
         justify-self: center;
         align-self: flex-start;
         text-align: center;
-        width: 200px;
-        height: 100px;
+        width: var(--button_fill_contact_width);
+        height: var(--button_fill_contact_height);
         padding: 0;
         background-color: var(--white);
         transition: 0.35s ease-in-out;
@@ -161,10 +148,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 60px;
-        padding: 0;
-        margin: 0;
+        width: var(--contact_text_width);
+        height: var(--contact_text_height);
         font-weight: 500;
         transition: 0.4s ease-in-out;
         cursor: pointer;
@@ -179,12 +164,9 @@
     }
 
     #hook {
-        height: 550px;
-        width: calc(100% - 160px);
-        margin-top: 240px;
-        margin-left: 80px;
-        margin-right: 80px;
-        padding: 0;
+        height: var(--hook_height);
+        width: var(--hook_width);
+        margin: var(--hook-margin);
         flex-direction: column;
         word-break: keep-all;
     }
@@ -194,23 +176,19 @@
         display: flex;
         justify-self: flex-start;
         align-self: center;
-        height: 300px;
-        width: 70%;
-        font-family: 'Lexendo', sans-serif;
+        height: var(--home-title_height);
+        width: var(--home-title_width);
         color: var(--raisin-black);
+        font-family: "Special Gothic Condensed One", sans-serif;
         text-align: left;
-        margin: 0;
         word-wrap: normal;
         font-weight: 120;
-        letter-spacing: -5px;
-        line-height: 1;
+        letter-spacing: var(--home-title_letter_spacing);
     }
 
     #home-description {
         display: flex;
-        justify-self: flex-start;
-        align-self: flex-start;
-        font-family: 'Lexendo', sans-serif;
+        font-family: 'Lexend', sans-serif;
         font-weight: 280;
         letter-spacing: 2px;
         font-size: 25px;
@@ -551,4 +529,23 @@
         color: var(--white);
     }
 
+}
+
+@layer mediaQueries {
+    @media screen and (max-width: 480px) {
+        :root {
+            --nav-bar_height: 80px;
+        }
+    }
+
+    /* Landscape phone to portrait tablet */
+    @media screen and (max-width: 767px) {}
+
+    /* Portrait tablet to landscape and desktop */
+    @media screen and (min-width: 768px) and (max-width: 979px) {}
+
+    /* Large desktop */
+    @media screen and (min-width: 1200px) {}
+
+    @media screen and (min-width: 1700px) {}
 }
