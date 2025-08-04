@@ -128,7 +128,7 @@
         margin-left: 120px;
     }
 
-    #contact_gmail_anchor {
+    #scrollToBottom {
         display: flex;
         justify-items: flex-end;
         align-self: center;
@@ -167,13 +167,14 @@
         margin: 0;
         font-weight: 500;
         transition: 0.4s ease-in-out;
+        cursor: pointer;
     }
 
-    #contact_gmail_anchor:hover #button_fill_contact {
+    #scrollToBottom:hover #button_fill_contact {
         height: 0;
     }
 
-    #contact_gmail_anchor:hover #contact_text {
+    #scrollToBottom:hover #contact_text {
         color: var(--white);
     }
 
@@ -335,7 +336,8 @@
         width: 100%;
         height: 100%;
         transition: 0.3s ease-in-out;
-        object-fit: fill;
+        object-fit: cover;
+        filter:brightness(1);
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
 
@@ -390,9 +392,10 @@
         height: 100%;
         width: 80%;
         object-fit: cover;
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
         padding: 0;
-        margin-left: 40px
+        margin-left: 40px;
+        border-radius: 10%;
     }
 
     #personal-description {
@@ -477,11 +480,9 @@
         text-decoration: none;
         justify-self: center;
         align-self: center;
-        font-family: 'Inter', sans-serif;
-        font-size: 25px;
         width: 250px;
         height: 75px;
-        background-color: transparent;
+        background-color: var(--raisin-black);
         border: 1px solid var(--raisin-black);
         color: var(--raisin-black);
         overflow: hidden;
@@ -491,13 +492,38 @@
 
     #button_fill_getintouch {
         display: flex;
-        /* justify-self: center;
+        justify-self: center;
         align-self: flex-start;
         text-align: center;
-        width: 200px;
-        height: 100px;
+        width: 250px;
+        height: 75px;
         padding: 0;
         background-color: var(--white);
-        transition: 0.35s ease-in-out; */
+        transition: 0.35s ease-in-out;
     }
+
+    #get_in_touch_text {
+        font-family: 'Inter', sans-serif;
+        font-size: 25px;
+        color: var(--raisin-black);
+        transition: 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 75px;
+        padding: 0;
+        margin: 0;
+        font-weight: 500;
+        transition: 0.4s ease-in-out;
+    }
+
+    #getintouch_gmail_anchor:hover #button_fill_getintouch {
+        height: 0;
+    }
+
+    #getintouch_gmail_anchor:hover #get_in_touch_text {
+        color: var(--white);
+    }
+
 }

@@ -1,8 +1,7 @@
 Remaining:
     -change text to match my characteristics
     -global font, font colors and sizes
-    -compact margins
-    -Images and icons at the bottom
+    -compact margins & CSS Code
     -Hidden image display when hovering
     -Media Queries & Browser Compatibility
     -Other pages
@@ -10,6 +9,7 @@ Remaining:
     -Translate to Italian
     -Animations with JS or CSS only; keyframes
     -Little design icons like arrows or cute stickers
+    -At the bottom a button that scrolls up to home: Turn Back to Home
 
 
 To be checked after finishing:
