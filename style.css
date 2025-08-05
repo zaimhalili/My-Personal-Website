@@ -20,24 +20,106 @@
 
 @layer global {
 
+    /* Dimensions */
     :root {
+        /* Nav Bar */
         --nav-bar_height: 120px;
         --nav-bar-logo_width-height: 80px;
         --nav-bar-logo_margin-left: 120px;
+        /* Scroll to Bottom Button*/
         --scrollToBottom_width: 150px;
         --scrollToBottom_height: 60px;
         --scrollToBottom_margin-right: 120px;
+        /* Scroll to Bottom Button Fill */
         --button_fill_contact_height: 100px;
         --button_fill_contact_width: 200px;
+        /* Scroll To Bottom Text */
         --contact_text_height: 60px;
         --contact_text_width: 100%;
+        /* Hook Div */
         --hook_height: 550px;
-        --hook_width: calc(100% - 160px);
+        --hook-margin-left-right: 80px;
+        --hook_width: calc(100% - var(--hook-margin-left-right) * 2);
         --hook-margin: 240px 80px 0 80px;
+        /* Hook Home Title */
         --home-title_height: 300px;
         --home-title_width: 70%;
         --home-title_letter_spacing: -5px;
-
+        /* Hook Home Description */
+        --home-description_height: 200px;
+        --home-description_width: 40%;
+        --home-description_padding-top: 40px;
+        /* Project Container */
+        --project-container_height: 2400px;
+        --project-container_width: 1200px;
+        --project-container_margin-top: 100px;
+        /* Project */
+        --project_margin: 40px 80px 40px 80px;
+        --project-margin-left-right: 80px;
+        --project_height: 840px;
+        --project_width: calc(100vw - var(--project-margin-left-right) * 2);
+        /* Container left c-left */
+        --c-left_width: 50%;
+        --c-left_height: 850px;
+        --c_left_margin: 40px 0 40px 0;
+        /* Case Number Text Class for Case Number for each project */
+        --case-no_margin-bottom: 220px;
+        /* Case Title */
+        --case-title_margin-bottom: 20px;
+        /* Case Description */
+        --case-description_width: 600px;
+        --case-description_margin-top: -10px;
+        /* View Case */
+        --view-case_height: 50px;
+        --view-case_width: 200px;
+        --view-case_margin-top: 20px;
+        /* Image Container */
+        --image-container_height: 850px;
+        --image-container_width: 50%;
+        --image-container_margin: 40px 0 40px 0;
+        /* Image Link */
+        --image-link_padding: 0 0 0 50px;
+        /* Personal Details */
+        --personal-details_margin: 40px 80px 0 80px;
+        --personal-details_margin-left-right: 80px;
+        --personal-details_width: calc(100vw - var(--personal-details_margin-left-right) * 2);
+        --personal-details_height: 1020px;
+        --personal-details_padding: 120px 0 120px 0;
+        /* Case Number ID for ABOUT Info */
+        --case-no-id_margin-top: -100px;
+        /* Img left container for personal image */
+        --img-left_width: 55%;
+        --img-left_height: 100%;
+        /* Personal Image */
+        --personal-image_height: 100%;
+        --personal-image_width: 80%;
+        --personal-image_margin-left: 40px;
+        /* Personal Description */
+        --personal-description_width: 45%;
+        --personal-description_height: 850px;
+        --personal-description_margin-right: 220px;
+        --personal-description_padding-left: 100px;
+        /* Contact Me Container */
+        --contact-me-container_margin-left-right: 80px;
+        --contact-me-container_width: calc(100vw - var(--contact-me-container_margin-left-right) * 2);
+        --contact-me-container_height: 500px;
+        --contact-me-container_margin: 240px 80px 0 80px;
+        --contact-me-container_padding-bottom: 550px;
+        /* Social Media Icons */
+        --socialM-icon_width: 70px;
+        --socialM-icon_height: 70px;
+        --socialM-icon_margin: 20px 10px 80px 10px;
+        /* Final Hook */
+        --final-hook_width: 100%;
+        --final-hook_height: 100px;
+        --final-hook_margin: 20px 0 40px 0;
+        /* Get In Touch Gmail Anchor Tag */
+        width: 250px;
+        height: 75px;
+        /* Button Fill Get In Touch */
+        width: 250px;
+        height: 75px;
+        /* Get in Touch Text */
     }
 
     *,
@@ -192,11 +274,11 @@
         font-weight: 280;
         letter-spacing: 2px;
         font-size: 25px;
-        height: 200px;
-        width: 40%;
+        height: var(--home-description_height);
+        width: var(--home-description_width);
         color: var(--oxford-blue);
         word-break: keep-all;
-        padding-top: 40px;
+        padding-top: var(--home-description_padding-top);
     }
 
     #project-container {
@@ -204,21 +286,18 @@
         justify-self: center;
         align-self: center;
         flex-direction: column;
-        height: 2400px;
-        width: 1200px;
-        margin-top: 100px;
+        height: var(--project-container_height);
+        width: var(--project-container_width);
+        margin-top: var(--project-container_margin-top);
     }
 
     .project {
         border-top: 2px solid var(--raisin-black);
         display: flex;
         flex-wrap: wrap row;
-        height: 840px;
-        width: calc(100vw - 160px);
-        margin-right: 80px;
-        margin-left: 80px;
-        margin-top: 40px;
-        margin-bottom: 40px;
+        height: var(--project_height);
+        width: var(--project_width);
+        margin: var(--project_margin);
     }
 
     .c-left {
@@ -226,10 +305,10 @@
         align-items: center;
         flex-direction: column;
         justify-content: flex-start;
-        width: 50%;
-        height: 850px;
-        margin-bottom: 40px;
-        margin-top: 40px;
+        width: var(--c-left_width);
+        height: var(--c-left_height);
+        margin: var(--c_left_margin);
+
     }
 
     .case-no {
@@ -240,9 +319,7 @@
         justify-self: flex-start;
         align-self: flex-start;
         list-style-type: disc;
-        padding: 0;
-        margin-bottom: 220px;
-        margin-left: 0;
+        margin: 0 0 220px 0;
         color: var(--space-cadet);
     }
 
@@ -253,19 +330,18 @@
         display: flex;
         align-self: flex-start;
         justify-self: flex-start;
-        padding: 0;
-        margin-bottom: 20px;
+        margin-bottom: var(--case-title_margin-bottom);
     }
 
     .case-description {
         font-size: 25px;
         font-weight: 400;
-        width: 600px;
+        width: var(--case-description_width);
         display: flex;
         align-self: flex-start;
         justify-self: flex-start;
         text-align: left;
-        margin-top: -10px;
+        margin-top: var(--case-description_margin-top);
     }
 
     .view-case {
@@ -274,15 +350,15 @@
         font-weight: 450;
         color: var(--oxford-blue);
         border: 2px solid var(--oxford-blue);
-        height: 50px;
-        width: 200px;
+        height: var(--view-case_height);
+        width: var(--view-case_width);
         display: flex;
         align-self: flex-start;
         justify-self: flex-start;
         align-items: center;
         justify-content: center;
         border-radius: 45px;
-        margin-top: 20px;
+        margin-top: var(--view-case_margin-top);
         transition: 0.3s;
     }
 
@@ -296,16 +372,15 @@
         align-items: center;
         justify-content: center;
         background-color: transparent;
-        height: 850px;
-        width: 50%;
+        height: var(--image-container_height);
+        width: var(--image-container_width);
         border-left: 2px solid var(--raisin-black);
-        margin-top: 40px;
-        margin-bottom: 40px;
+        margin: var(--image-container_margin);
     }
 
     .img-link {
         transition: 0.3s ease-in-out;
-        padding: 0px 0px 0px 50px;
+        padding: var(--image-link_padding);
         height: 100%;
         width: 100%;
     }
@@ -357,15 +432,12 @@
         align-self: flex-start;
         align-items: center;
         justify-content: center;
-        width: calc(100vw - 160px);
-        height: 1020px;
-        margin-top: 40px;
-        margin-left: 80px;
-        margin-right: 80px;
+        width: var(--personal-details_width);
+        height: var(--personal-details_height);
+        margin: var(--personal-details_margin);
         background-color: transparent;
         border-top: 2px solid var(--raisin-black);
-        padding-top: 120px;
-        padding-bottom: 120px;
+        padding: var(--personal-details_padding);
         border-bottom: 2px solid var(--raisin-black);
     }
 
@@ -374,17 +446,15 @@
         justify-self: flex-start;
         align-self: flex-start;
         list-style-type: disc;
-        padding: 0;
-        margin-top: -100px;
+        margin-top: var(--case-no-id_margin-top);
         color: var(--space-cadet);
     }
 
     .img-left {
         display: flex;
         flex-direction: row;
-        width: 55%;
-        height: 100%;
-        padding: 0;
+        width: var(--img-left_width);
+        height: var(--img-left_height);
     }
 
 
@@ -392,12 +462,11 @@
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        height: 100%;
-        width: 80%;
+        height: var(--personal-image_height);
+        width: var(--personal-image_width);
         object-fit: cover;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
-        padding: 0;
-        margin-left: 40px;
+        margin-left: var(--personal-image_margin-left);
         border-radius: 10%;
     }
 
@@ -406,12 +475,12 @@
         align-items: center;
         justify-content: flex-center;
         flex-wrap: row wrap;
-        width: 45%;
-        margin-right: 220px;
-        padding-left: 100px;
+        width: var(--personal-description_width);
+        height: var(--personal-description_height);
+        margin-right: var(--personal-description_margin-right);
+        padding-left: var(--personal-description_padding-left);
         font-size: 25px;
         font-weight: 500;
-        height: 850px;
     }
 
     #contact-me-container {
@@ -421,22 +490,20 @@
         justify-content: center;
         justify-self: center;
         align-self: flex-start;
-        width: calc(100vw - 160px);
-        height: 500px;
-        margin-top: 240px;
-        margin-left: 80px;
-        margin-right: 80px;
+        width: var(--contact-me-container_width);
+        height: var(--contact-me-container_height);
+        margin: var(--contact-me-container_margin);
+        padding-bottom: var(--contact-me-container_padding-bottom);
         flex-wrap: wrap;
-        padding-bottom: 550px;
     }
 
     .social-media-icon {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 70px;
-        height: 70px;
-        margin: 20px 10px 80px 10px;
+        width: var(--socialM-icon_width);
+        height: var(--socialM-icon_height);
+        margin: var(--socialM-icon_margin);
         background-color: transparent;
         border-radius: 50%;
         border: 1px solid var(--oxford-blue);
@@ -468,12 +535,11 @@
         align-items: center;
         letter-spacing: -4px;
         font-size: 80px;
-        width: 100%;
-        height: 100px;
+        width: var(--final-hook_width);
+        height: var(--final-hook_height);
+        margin: var(--final-hook_margin);
         color: var(--raisin-black);
         font-weight: 350;
-        margin-top: 20px;
-        margin-bottom: 40px;
     }
 
     #getintouch_gmail_anchor {
@@ -500,7 +566,6 @@
         text-align: center;
         width: 250px;
         height: 75px;
-        padding: 0;
         background-color: var(--white);
         transition: 0.35s ease-in-out;
     }
@@ -515,8 +580,6 @@
         align-items: center;
         width: 100%;
         height: 75px;
-        padding: 0;
-        margin: 0;
         font-weight: 500;
         transition: 0.4s ease-in-out;
     }
