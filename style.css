@@ -410,7 +410,7 @@
             width: 100%;
             height: 100%;
             transition: 0.3s ease-in-out;
-            object-fit: fill;
+            object-fit: cover;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             z-index: -1;
             display: block;
@@ -418,11 +418,11 @@
 
         .project-img-hidden {
             position: absolute;
-            top: 0;
+            top: 100;
             left: 100%;
             width: 100%;
             height: 100%;
-            object-fit: fill;
+            object-fit: cover;
             transition: left 0.4s ease-in-out;
             z-index: 2;
         }
@@ -618,36 +618,80 @@
     @media screen and (min-width: 768px) and (max-width: 979px) {}
 
     /* Large desktop */
-    @media screen and (max-width: 1270px) and (min-width: 980px){
+    @media screen and (max-width: 1270px) and (min-width: 980px) {
         @layer hook {
             #home-title {
                 font-size: 120px;
-                display: flex;
-                justify-self: flex-start;
-                align-self: center;
-                height: var(--home-title_height);
-                width: var(--home-title_width) + 30px;
-                color: var(--raisin-black);
-                font-family: "Special Gothic Condensed One", sans-serif;
-                text-align: left;
-                word-wrap: normal;
-                font-weight: 120;
-                letter-spacing: var(--home-title_letter_spacing);
-                background-color: yellowgreen;
+                width: 100%;
+                height: calc(var(--home-title_height) + 30px);
             }
 
             #home-description {
-                display: flex;
-                font-family: 'Lexend', sans-serif;
-                font-weight: 280;
-                letter-spacing: 2px;
-                font-size: 25px;
-                height: var(--home-description_height);
-                width: var(--home-description_width) + 30px;
-                color: var(--oxford-blue);
-                word-break: keep-all;
-                padding-top: var(--home-description_padding-top);
+                width: calc(var(--home-description_width) + 200px);
+                padding-top: calc(var(--home-description_padding-top) - 40px);
             }
+        }
+
+        @layer projects {
+            .case-no {
+                margin: 0 0 180px 0;
+            }
+
+            .case-title {
+                font-size: 50px;
+                margin-bottom: var(--case-title_margin-bottom);
+            }
+
+            .case-description {
+                width: var(--case-description_width) - 55px;
+                word-break: normal;
+            }
+
+            .project-img-display {
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                box-shadow: none;
+            }
+
+            .project-img-hidden {
+                object-fit: scale-down;
+            }
+
+        }
+
+        @layer bottom {
+            #case-no {
+                display: flex;
+                justify-self: flex-start;
+                align-self: flex-start;
+                list-style-type: disc;
+                margin-top: calc(var(--case-no-id_margin-top) - 10px);
+            }
+
+            .img-left {
+                width: calc(var(--img-left_width) + 50px);
+            }
+
+            #personal-image {
+                height: calc(var(--personal-image_height) / 1.5);
+                width: 100%;
+                object-fit: cover;
+                margin: 120px 0 0 0;
+            }
+
+            #personal-description {
+                width: calc(var(--personal-description_width) / 0.8);
+                height: calc(var(--personal-description_height) * 2 + 40px);
+                margin-right: 0;
+                margin-left: 40px;
+            }
+
+            #final-hook {
+                font-size: 80px;
+                height: calc(var(--final-hook_height) + 100px);
+            }
+
         }
     }
 }
