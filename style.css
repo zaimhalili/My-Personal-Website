@@ -114,12 +114,14 @@
         --final-hook_height: 100px;
         --final-hook_margin: 20px 0 40px 0;
         /* Get In Touch Gmail Anchor Tag */
-        width: 250px;
-        height: 75px;
+        --getInTouch-gmail-anchor_width: 250px;
+        --getInTouch-gmail-anchor_height: 75px;
         /* Button Fill Get In Touch */
-        width: 250px;
-        height: 75px;
+        --buttonFill-GetInTouch_width: 250px;
+        --buttonFill-GetInTouch_height: 75px;
         /* Get in Touch Text */
+        --getInTouch-text_width: 100%;
+        --getInTouch-text_height: 75px;
     }
 
     *,
@@ -226,7 +228,6 @@
         font-family: 'Inter', sans-serif;
         font-size: 20px;
         color: var(--raisin-black);
-        transition: 0.3s ease-in-out;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -549,8 +550,8 @@
         text-decoration: none;
         justify-self: center;
         align-self: center;
-        width: 250px;
-        height: 75px;
+        width: var(--getInTouch-gmail-anchor_width);
+        height: var(--getInTouch-gmail-anchor_height);
         background-color: var(--raisin-black);
         border: 1px solid var(--raisin-black);
         color: var(--raisin-black);
@@ -564,8 +565,8 @@
         justify-self: center;
         align-self: flex-start;
         text-align: center;
-        width: 250px;
-        height: 75px;
+        width: var(--buttonFill-GetInTouch_width);
+        height: var(--buttonFill-GetInTouch_height);
         background-color: var(--white);
         transition: 0.35s ease-in-out;
     }
@@ -574,12 +575,11 @@
         font-family: 'Inter', sans-serif;
         font-size: 25px;
         color: var(--raisin-black);
-        transition: 0.3s ease-in-out;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 75px;
+        width: var(--getInTouch-text_width);
+        height: var(--getInTouch-text_height);
         font-weight: 500;
         transition: 0.4s ease-in-out;
     }
