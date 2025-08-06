@@ -1,8 +1,5 @@
 <Remaining:>
     -Dark Mode Button
-    -change text to match my characteristics
-    -global font, font colors and sizes
-    -compact margins & CSS Code
     -Media Queries & Browser Compatibility
     -Other pages
     -Translate to Italian
