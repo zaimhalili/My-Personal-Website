@@ -709,7 +709,6 @@
                 padding: 0;
                 border-bottom: 2px solid var(--raisin-black);
             }
-
             #case-no {
                 display: flex;
                 justify-content: center;
@@ -728,14 +727,15 @@
 
             #personal-image {
                 justify-self: center;
-                height: auto;
-                width: auto;
+                height: 70%;
+                width: 100%;
+                object-fit: fill;
                 margin: 50px 0 0 0;
             }
 
             #personal-description {
                 justify-content: center;
-                align-items: center;
+                align-items: flex-start;
                 text-align: center;
                 width: 100%;
                 height: 300px;
@@ -747,7 +747,8 @@
             }
 
             #final-hook {
-                font-size: 80px;
+                font-size: 70px;
+                text-align: center;
                 height: calc(var(--final-hook_height) + 100px);
             }
 
