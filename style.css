@@ -617,7 +617,7 @@
         @layer hook {
             #hook {
                 margin: 140px 80px 0 80px;
-                
+
             }
 
             #home-title {
@@ -652,7 +652,7 @@
                 height: 30px;
                 text-align: center;
                 display: flex;
-                align-items: flex-start;
+                align-items: center;
                 justify-content: center;
             }
 
@@ -683,17 +683,25 @@
                 justify-content: center;
             }
 
+            .show-hide {
+                object-fit: fill;
+                border-radius: 0;
+            }
+
+            .project-img-display {
+                width: auto;
+                height: 100%;
+                object-fit: cover;
+            }
+
             .img-link {
                 padding: 0 0 0 10px;
                 height: 100%;
                 width: 100%;
             }
 
-            .project-img-display {
-                width: auto;
-                height: auto;
-                object-fit: contain;
-                box-shadow: none;
+            .show-hide:hover{
+                border-radius: 8%;
             }
 
             .project-img-hidden {
@@ -717,6 +725,7 @@
                 padding: 0;
                 border-bottom: 2px solid var(--raisin-black);
             }
+
             #case-no {
                 display: flex;
                 justify-content: center;
@@ -793,16 +802,19 @@
                 width: var(--case-description_width) - 55px;
                 word-break: normal;
             }
-            .show-hide{
+
+            .show-hide {
                 object-fit: fill;
                 border-radius: 0;
             }
+
             .project-img-display {
                 width: auto;
                 height: 100%;
                 object-fit: cover;
-            }      
-            .show-hide:hover{
+            }
+
+            .show-hide:hover {
                 border-radius: 10%;
             }
 
