@@ -617,6 +617,7 @@
         @layer hook {
             #hook {
                 margin: 140px 80px 0 80px;
+                
             }
 
             #home-title {
@@ -625,6 +626,7 @@
                 height: calc(var(--home-title_height) + 30px);
                 align-items: center;
                 text-align: center;
+                letter-spacing: 2px;
             }
 
             #home-description {
@@ -762,6 +764,7 @@
                 font-size: 120px;
                 width: 100%;
                 height: calc(var(--home-title_height) + 30px);
+                letter-spacing: -2px;
             }
 
             #home-description {
@@ -784,16 +787,21 @@
                 width: var(--case-description_width) - 55px;
                 word-break: normal;
             }
-
+            .show-hide{
+                object-fit: fill;
+                border-radius: 0;
+            }
             .project-img-display {
                 width: auto;
-                height: auto;
-                object-fit: contain;
-                box-shadow: none;
+                height: 100%;
+                object-fit: cover;
+            }      
+            .show-hide:hover{
+                border-radius: 10%;
             }
 
             .project-img-hidden {
-                object-fit: scale-down;
+                display: none;
             }
 
         }
