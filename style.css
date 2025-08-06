@@ -638,23 +638,26 @@
 
         @layer projects {
             .c-left {
+                height: 100%;
+                width: 100%;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
             }
 
             .case-no {
+                flex-direction: column;
                 margin: 0 0 20px 0;
-                width: 100%;
-                height: auto;
+                width: 200px;
+                height: 30px;
                 text-align: center;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: center;
-                justify-self: center;
             }
 
             .case-title {
+                flex-direction: column;
                 width: 100%;
                 font-size: 48px;
                 margin-bottom: var(--case-title_margin-bottom);
@@ -669,11 +672,14 @@
                 text-align: center;
                 padding-right: 10px;
                 height: auto;
-                width: var(--case-description_width) - 55px;
+                width: 100%;
                 word-break: normal;
             }
 
             .view-case {
+                flex-direction: column;
+                height: var(--view-case_height);
+                width: calc(var(--view-case_width) + 20px);
                 justify-content: center;
             }
 
@@ -691,7 +697,7 @@
             }
 
             .project-img-hidden {
-                object-fit: scale-down;
+                display: none;
             }
         }
 
