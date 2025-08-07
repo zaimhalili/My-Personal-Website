@@ -773,6 +773,10 @@
                 height: calc(var(--final-hook_height) + 100px);
             }
 
+            #getintouch_gmail_anchor {
+                padding-bottom: 70px;
+            }
+
         }
     }
 
