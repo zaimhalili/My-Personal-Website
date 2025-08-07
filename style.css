@@ -639,7 +639,7 @@
         @layer projects {
             .c-left {
                 height: 100%;
-                width: 50%;
+                width:40%;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
@@ -647,7 +647,7 @@
 
             .case-no {
                 flex-direction: column;
-                margin: 0 0 20px 0;
+                margin: 0 0 40px 0;
                 width: 200px;
                 height: 30px;
                 text-align: center;
@@ -659,7 +659,7 @@
             .case-title {
                 flex-direction: column;
                 width: 100%;
-                font-size: 48px;
+                font-size: 46px;
                 margin-bottom: var(--case-title_margin-bottom);
                 padding-right: 10px;
                 padding-bottom: 10px;
@@ -668,7 +668,7 @@
             }
 
             .case-description {
-                font-size: 23px;
+                font-size: 20px;
                 text-align: center;
                 padding-right: 10px;
                 height: auto;
@@ -704,10 +704,6 @@
                 width: 100%;
             }
 
-            .show-hide:hover {
-                border-radius: 8%;
-            }
-
             .project-img-hidden {
                 display: none;
             }
@@ -717,8 +713,6 @@
             #personal-details {
                 display: flex;
                 flex-direction: column;
-                justify-self: center;
-                align-self: flex-start;
                 align-items: center;
                 justify-content: center;
                 width: var(--personal-details_width);
@@ -740,7 +734,7 @@
 
             .img-left {
                 margin-top: 100px;
-                align-items: flex-start;
+                align-items: center;
                 justify-content: center;
                 width: 100%;
                 height: 100%;
@@ -767,7 +761,7 @@
                 padding: 0;
             }
 
-            #contact-me-container{
+            #contact-me-container {
                 padding-bottom: 650px;
             }
 
