@@ -639,7 +639,7 @@
         @layer projects {
             .c-left {
                 height: 100%;
-                width: 100%;
+                width: 50%;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
@@ -688,6 +688,10 @@
                 border-radius: 0;
             }
 
+            .img-container {
+                width: 60%;
+            }
+
             .project-img-display {
                 width: auto;
                 height: 100%;
@@ -700,7 +704,7 @@
                 width: 100%;
             }
 
-            .show-hide:hover{
+            .show-hide:hover {
                 border-radius: 8%;
             }
 
