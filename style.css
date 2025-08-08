@@ -624,12 +624,16 @@
                 align-items: center;
                 text-align: center;
                 letter-spacing: 2px;
+                height: 240px;
             }
 
             #home-description {
+                height: auto;
                 width: 100%;
                 padding-top: 0;
                 text-align: center;
+                font-size: 25px;
+                margin-top: 0;
             }
         }
     }
