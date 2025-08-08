@@ -639,7 +639,7 @@
         @layer projects {
             .c-left {
                 height: 100%;
-                width:40%;
+                width: 40%;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
@@ -743,7 +743,7 @@
             #personal-image {
                 justify-self: center;
                 height: 70%;
-                width: 100%;
+                width: 80%;
                 object-fit: fill;
                 margin: 50px 0 0 0;
             }
@@ -769,12 +769,12 @@
                 font-size: 70px;
                 text-align: center;
                 height: calc(var(--final-hook_height) + 100px);
+                margin-bottom: 100px;
             }
 
             #getintouch_gmail_anchor {
                 padding-bottom: 70px;
             }
-
         }
     }
 
