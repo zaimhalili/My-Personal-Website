@@ -610,14 +610,26 @@
     @media screen and (min-width: 0px) and (max-width: 480px) {}
 
     /* Landscape phone to portrait tablet */
-    @media screen and (min-width: 481px) and(max-width: 767px) {
+    @media screen and (min-width: 481px) and (max-width: 767px) {
         @layer hook {
-            #hook{
-                height: auto;
+            #hook {
+                margin: 140px 80px 0 80px;
 
             }
-            #home-title{
-                font-size: smaller;
+
+            #home-title {
+                font-size: 50px;
+                width: 100%;
+                height: calc(var(--home-title_height) + 30px);
+                align-items: center;
+                text-align: center;
+                letter-spacing: 2px;
+            }
+
+            #home-description {
+                width: 100%;
+                padding-top: 0;
+                text-align: center;
             }
         }
     }
