@@ -623,7 +623,7 @@
 
             #home-title {
                 font-size: 55px;
-                width: 80%;
+                width: 100%;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
@@ -640,6 +640,82 @@
                 margin-top: 0;
             }
         }
+                @layer projects {
+                    .project{
+                        flex-direction: column;
+                        height: calc(var(--project-container_height) + 100px);
+                    }
+                    .c-left {
+                        height: auto;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+        
+                    .case-no {
+                        flex-direction: column;
+                        margin: 0 0 40px 0;
+                        width: 200px;
+                        height: 30px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+        
+                    .case-title {
+                        flex-direction: column;
+                        width: 100%;
+                        font-size: 46px;
+                        margin-bottom: var(--case-title_margin-bottom);
+                        padding: 0;
+                        text-align: center;
+                        align-items: center;
+                    }
+        
+                    .case-description {
+                        font-size: 20px;
+                        text-align: center;
+                        padding-right: 10px;
+                        height: auto;
+                        width: 100%;
+                        word-break: normal;
+                    }
+        
+                    .view-case {
+                        flex-direction: column;
+                        height: var(--view-case_height);
+                        width: calc(var(--view-case_width) + 20px);
+                        justify-content: center;
+                    }
+        
+                    .show-hide {
+                        object-fit: fill;
+                        border-radius: 20px;
+                    }
+        
+                    .img-container {
+                        width: 100%;
+                        border-left: 0;
+                    }
+        
+                    .project-img-display {
+                        width: auto;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+        
+                    .img-link {
+                        padding: 0;
+                        height: 100%;
+                        width: 100%;
+                    }
+        
+                    .project-img-hidden {
+                        display: none;
+                    }
+                }
     }
 
     /* Portrait tablet to landscape and desktop */
