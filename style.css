@@ -654,7 +654,6 @@
                 text-align: center;
                 width: 110px;
                 height: 100%;
-                padding: 0;
                 background-color: var(--white);
                 transition: 0.35s ease-in-out;
 
@@ -683,7 +682,7 @@
         @layer hook {
             #hook {
                 margin: 80px 0 0 0;
-                padding: 0 45px 0 45px;
+                padding: 0 25px 0 25px;
                 width: 100%;
                 max-width: 767px;
                 align-items: center;
@@ -691,14 +690,14 @@
             }
 
             #home-title {
-                font-size: 55px;
+                font-size: 50px;
                 width: 100%;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
                 letter-spacing: 2px;
                 height: auto;
-                margin-bottom: 50px;
+                margin-bottom: 20px;
             }
 
             #home-description {
@@ -706,13 +705,16 @@
                 width: 100%;
                 padding-top: 0;
                 text-align: center;
-                font-size: 23px;
+                font-size: 20px;
                 margin-top: 0;
-                padding: 0 50px 0 50px;
+                padding: 0 30px 0 30px;
             }
         }
 
         @layer projects {
+            #project-container{
+                margin-top: -20px;
+            }
             .project {
                 flex-direction: column;
                 height: calc(var(--project-container_height) + 100px);
