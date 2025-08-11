@@ -644,6 +644,7 @@
                 height: 30px;
                 overflow: hidden;
                 margin-right: 30px;
+
             }
 
             #button_fill_contact {
@@ -656,15 +657,26 @@
                 padding: 0;
                 background-color: var(--white);
                 transition: 0.35s ease-in-out;
+
             }
 
             #contact_text {
                 font-family: 'Inter', sans-serif;
                 font-size: 15px;
+                display: flex;
                 justify-content: center;
+                padding-top: 5px;
                 align-items: flex-start;
                 width: 100%;
                 height: 100%;
+            }
+
+            #scrollToBottom:hover #button_fill_contact {
+                height: 0;
+            }
+
+            #scrollToBottom:hover #contact_text {
+                color: var(--white);
             }
         }
 
