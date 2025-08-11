@@ -5,9 +5,9 @@
         --c-blue: #006eff;
         --c-blue-light: #c3e1ff;
         --raisin-black: #1b1725ff;
-        --oxford-blue: #01233dff;
-        --lapis-lazuli: #035e7bff;
-        --atomic-tangerine: #fa8c4cff;
+        --oxford-blue: rgb(1, 35, 61);
+        --lapis-lazuli: rgb(3, 94, 123);
+        --atomic-tangerine: rgb(250, 140, 76);
         --french-gray: #c7cedbff;
 
         --black: #000505ff;
@@ -15,6 +15,7 @@
         --ultra-violet: #5d5d81ff;
         --columbia-blue: #bfcde0ff;
         --white: #efefef;
+
     }
 }
 
@@ -133,12 +134,15 @@
     }
 
     body {
-        background-color: var(--white);
+        /* background-color: var(--white); */
+        background: linear-gradient(10deg, var(--white), var(--french-gray)) fixed;
         margin: 0;
         padding: 0;
-        height: 3000px;
+        min-height: 100vh;
         width: 100%;
         overflow-x: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     a {
@@ -161,7 +165,7 @@
     h5,
     h6 {
         font-family: "Lexend", sans-serif;
-        color: var(--raisin-black);
+        /* color: var(--raisin-black); */
     }
 
     p {
@@ -208,11 +212,11 @@
             align-self: center;
             width: var(--scrollToBottom_width);
             height: var(--scrollToBottom_height);
-            background-color: var(--raisin-black);
-            border: 1px solid var(--raisin-black);
+            background: linear-gradient(180deg, var(--lapis-lazuli), var(--oxford-blue));
             overflow: hidden;
             margin-right: var(--scrollToBottom_margin-right);
             border-radius: 45px;
+            box-shadow: 0 0px 10px rgba(1, 35, 61, 0.8);
         }
 
         #button_fill_contact {
@@ -339,6 +343,10 @@
             align-self: flex-start;
             justify-self: flex-start;
             margin-bottom: var(--case-title_margin-bottom);
+            background: linear-gradient(var(--lapis-lazuli), var(--oxford-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .case-description {
@@ -564,7 +572,7 @@
             align-self: center;
             width: var(--getInTouch-gmail-anchor_width);
             height: var(--getInTouch-gmail-anchor_height);
-            background-color: var(--raisin-black);
+            background: linear-gradient(var(--atomic-tangerine), rgb(255, 84, 4));
             border: 1px solid var(--raisin-black);
             color: var(--raisin-black);
             overflow: hidden;
