@@ -134,8 +134,8 @@
     }
 
     body {
-        /* background-color: var(--white); */
-        background: linear-gradient(10deg, var(--white), var(--french-gray)) fixed;
+        background-color: var(--white);
+        /* background: linear-gradient(10deg, var(--white), var(--french-gray)) fixed; */
         margin: 0;
         padding: 0;
         min-height: 100vh;
@@ -339,6 +339,7 @@
             font-size: 55px;
             letter-spacing: -4px;
             font-weight: 400;
+            width: 100%;
             display: flex;
             align-self: flex-start;
             justify-self: flex-start;
@@ -561,6 +562,10 @@
             margin: var(--final-hook_margin);
             color: var(--raisin-black);
             font-weight: 350;
+            background: linear-gradient(0deg, var(--atomic-tangerine), var(--oxford-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         #getintouch_gmail_anchor {
@@ -572,12 +577,13 @@
             align-self: center;
             width: var(--getInTouch-gmail-anchor_width);
             height: var(--getInTouch-gmail-anchor_height);
-            background: linear-gradient(var(--atomic-tangerine), rgb(255, 84, 4));
+            background: linear-gradient(var(--atomic-tangerine));
             border: 1px solid var(--raisin-black);
             color: var(--raisin-black);
             overflow: hidden;
             border-radius: 45px;
             text-align: center;
+            transition: 0.4s ease-out;
         }
 
         #button_fill_getintouch {
@@ -611,11 +617,57 @@
         #getintouch_gmail_anchor:hover #get_in_touch_text {
             color: var(--white);
         }
+
+        #getintouch_gmail_anchor:hover {
+            /* box-shadow: 10px 10px 10px rgba(250, 140, 76, 1); */
+            transform: scale(1.05);
+        }
     }
 }
 
 @layer mediaQueries {
-    @media screen and (min-width: 0px) and (max-width: 480px) {
+    @media screen and (max-width: 480px) {
+        @layer nav-bar {
+            #nav-bar {
+                height: calc(var(--nav-bar_height) / 2);
+            }
+
+            #nav-bar_logo {
+                margin-left: 20px;
+            }
+
+            #scrollToBottom {
+                display: flex;
+                justify-items: flex-end;
+                align-self: center;
+                width: 110px;
+                height: 30px;
+                overflow: hidden;
+                margin-right: 30px;
+            }
+
+            #button_fill_contact {
+                display: flex;
+                justify-self: center;
+                align-self: flex-start;
+                text-align: center;
+                width: 110px;
+                height: 100%;
+                padding: 0;
+                background-color: var(--white);
+                transition: 0.35s ease-in-out;
+            }
+
+            #contact_text {
+                font-family: 'Inter', sans-serif;
+                font-size: 15px;
+                justify-content: center;
+                align-items: flex-start;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
         @layer hook {
             #hook {
                 margin: 80px 0 0 0;
