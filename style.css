@@ -607,10 +607,7 @@
 }
 
 @layer mediaQueries {
-    @media screen and (min-width: 0px) and (max-width: 480px) {}
-
-    /* Landscape phone to portrait tablet */
-    @media screen and (min-width: 481px) and (max-width: 767px) {
+    @media screen and (min-width: 0px) and (max-width: 480px) {
         @layer hook {
             #hook {
                 margin: 80px 0 0 0;
@@ -628,7 +625,8 @@
                 justify-content: center;
                 text-align: center;
                 letter-spacing: 2px;
-                height: 240px;
+                height: auto;
+                margin-bottom: 50px;
             }
 
             #home-description {
@@ -636,9 +634,9 @@
                 width: 100%;
                 padding-top: 0;
                 text-align: center;
-                font-size: 22px;
+                font-size: 23px;
                 margin-top: 0;
-                padding: 0 60px 0 60px;
+                padding: 0 50px 0 50px;
             }
         }
 
@@ -688,17 +686,19 @@
 
             .view-case {
                 height: var(--view-case_height);
-                width: calc(var(--view-case_width) + 20px);
+                width: 100%;
                 justify-content: center;
                 display: flex;
             }
 
             .show-hide {
-                object-fit: fill;
+                height: auto;
                 border-radius: 20px;
             }
 
             .img-container {
+                margin-top: 0;
+                height: auto;
                 width: 100%;
                 border-left: 0;
             }
@@ -706,22 +706,304 @@
             .project-img-display {
                 width: auto;
                 height: 100%;
-                object-fit: cover;
+                object-fit: scale-down;
             }
 
             .img-link {
                 padding: 0;
-                height: 100%;
+                height: auto;
                 width: 100%;
             }
 
+            /* To be deleted if wished */
             .project-img-hidden {
                 display: none;
             }
         }
+
+        @layer bottom {
+            #personal-details {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: var(--personal-details_width);
+                height: auto;
+                margin: var(--personal-details_margin);
+                background-color: transparent;
+                border-top: 2px solid var(--raisin-black);
+                padding: 0;
+                border-bottom: 2px solid var(--raisin-black);
+            }
+
+            #case-no {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-self: flex-start;
+                width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                margin-top: 0;
+            }
+
+            #personal-image-container {
+                height: 100%;
+                width: 100%;
+                margin-top: 30px;
+                margin-bottom: 50px;
+            }
+
+            .img-left {
+                flex-direction: column;
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                width: auto;
+                height: auto;
+            }
+
+            #personal-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                object-fit: scale-down;
+                margin: 0;
+            }
+
+            #personal-description {
+                justify-content: center;
+                align-items: flex-start;
+                text-align: center;
+                width: 100%;
+                height: 400px;
+                font-size: 20px;
+                margin: 0;
+                padding: 0;
+            }
+
+            #contact-me-container {
+                margin-top: 100px;
+                padding-bottom: 650px;
+            }
+
+            #final-hook {
+                font-size: 60px;
+                text-align: center;
+                height: calc(var(--final-hook_height) + 100px);
+                margin-bottom: 100px;
+                letter-spacing: -2px;
+            }
+
+            #getintouch_gmail_anchor {
+                padding-bottom: 70px;
+            }
+        }
     }
 
-    /* Portrait tablet to landscape and desktop */
+    /* Landscape phone to portrait tablet */
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        @layer hook {
+            #hook {
+                margin: 80px 0 0 0;
+                padding: 0 45px 0 45px;
+                width: 100%;
+                max-width: 767px;
+                align-items: center;
+                justify-self: center;
+            }
+
+            #home-title {
+                font-size: 55px;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                letter-spacing: 2px;
+                height: auto;
+                margin-bottom: 50px;
+            }
+
+            #home-description {
+                height: auto;
+                width: 100%;
+                padding-top: 0;
+                text-align: center;
+                font-size: 23px;
+                margin-top: 0;
+                padding: 0 50px 0 50px;
+            }
+        }
+
+        @layer projects {
+            .project {
+                flex-direction: column;
+                height: calc(var(--project-container_height) + 100px);
+            }
+
+            .c-left {
+                height: auto;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .case-no {
+                flex-direction: column;
+                margin: 0 0 40px 0;
+                width: 200px;
+                height: 30px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .case-title {
+                flex-direction: column;
+                width: 100%;
+                font-size: 46px;
+                margin-bottom: var(--case-title_margin-bottom);
+                padding: 0;
+                text-align: center;
+                align-items: center;
+                letter-spacing: -2px;
+            }
+
+            .case-description {
+                font-size: 20px;
+                text-align: center;
+                padding-right: 10px;
+                height: auto;
+                width: 100%;
+                word-break: normal;
+            }
+
+            .view-case {
+                height: var(--view-case_height);
+                width: 100%;
+                justify-content: center;
+                display: flex;
+            }
+
+            .show-hide {
+                height: auto;
+                border-radius: 20px;
+            }
+
+            .img-container {
+                margin-top: 0;
+                height: auto;
+                width: 100%;
+                border-left: 0;
+            }
+
+            .project-img-display {
+                width: auto;
+                height: 100%;
+                object-fit: scale-down;
+            }
+
+            .img-link {
+                padding: 0;
+                height: auto;
+                width: 100%;
+            }
+
+            /* To be deleted if wished */
+            .project-img-hidden {
+                display: none;
+            }
+        }
+
+        @layer bottom {
+            #personal-details {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: var(--personal-details_width);
+                height: auto;
+                margin: var(--personal-details_margin);
+                background-color: transparent;
+                border-top: 2px solid var(--raisin-black);
+                padding: 0;
+                border-bottom: 2px solid var(--raisin-black);
+            }
+
+            #case-no {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-self: flex-start;
+                width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                margin-top: 0;
+            }
+
+            #personal-image-container {
+                height: 100%;
+                width: 100%;
+                margin-top: 30px;
+                margin-bottom: 50px;
+            }
+
+            .img-left {
+                flex-direction: column;
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                width: auto;
+                height: auto;
+            }
+
+            #personal-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                object-fit: scale-down;
+                margin: 0;
+            }
+
+            #personal-description {
+                justify-content: center;
+                align-items: flex-start;
+                text-align: center;
+                width: 100%;
+                height: 400px;
+                font-size: 20px;
+                margin: 0;
+                padding: 0;
+            }
+
+            #contact-me-container {
+                margin-top: 100px;
+                padding-bottom: 650px;
+            }
+
+            #final-hook {
+                font-size: 60px;
+                text-align: center;
+                height: calc(var(--final-hook_height) + 100px);
+                margin-bottom: 100px;
+                letter-spacing: -2px;
+            }
+
+            #getintouch_gmail_anchor {
+                padding-bottom: 70px;
+            }
+        }
+    }
+
     @media screen and (min-width: 768px) and (max-width: 979px) {
         @layer hook {
             #hook {
@@ -735,6 +1017,7 @@
                 height: calc(var(--home-title_height) + 30px);
                 align-items: center;
                 text-align: center;
+                height: auto;
                 letter-spacing: 2px;
             }
 
@@ -885,6 +1168,7 @@
                 padding-bottom: 70px;
             }
         }
+
     }
 
     /* Large desktop */
