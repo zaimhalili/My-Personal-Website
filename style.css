@@ -712,9 +712,10 @@
         }
 
         @layer projects {
-            #project-container{
+            #project-container {
                 margin-top: -20px;
             }
+
             .project {
                 flex-direction: column;
                 height: calc(var(--project-container_height) + 100px);
@@ -746,7 +747,7 @@
                 justify-content: flex-start;
             }
 
-            ul{
+            ul {
                 width: 100%;
                 display: flex;
                 justify-content: center;
@@ -877,6 +878,10 @@
             #contact-me-container {
                 margin-top: 100px;
                 padding-bottom: 0px;
+            }
+
+            .social-media-icon {
+                margin-bottom: 20px;
             }
 
             #final-hook {
