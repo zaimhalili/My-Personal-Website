@@ -206,6 +206,27 @@
             margin-left: var(--nav-bar-logo_margin-left);
         }
 
+        #darkMode{
+            overflow: hidden;
+            height: 70px;
+            width: 70px;
+            background-color: transparent;
+            border: 0;
+            transition: 0.2s ease-out;
+        }
+
+        #darkMode_image{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #darkMode:hover{
+            filter: grayscale(1);
+            transform: scale(1.1);
+            color:red;
+        }
+
         #scrollToBottom {
             display: flex;
             justify-items: flex-end;

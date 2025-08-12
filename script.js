@@ -9,7 +9,13 @@
 //         el.classList.add('animated');
 //     });
 // });
+function translateToItalian() {
+    alert("Italian")
+}
 
+function darkMode() {
+    alert("Dark Mode")
+}
 
 function scrollToBottom() {
     window.scrollTo({
@@ -17,3 +23,15 @@ function scrollToBottom() {
         behavior: 'smooth'
     });
 }
+
+
+
+// <Remaining:>
+//     -Dark Mode Button
+//     -Other pages
+//     -Translate to Italian
+//     -Animations with JS or CSS only; keyframes
+//     -At the bottom a button that scrolls up to home: Turn Back to Home
+//     -Refresh
+
+//     <To be checked after finishing:></To>

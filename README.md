@@ -68,20 +68,6 @@ Based in Italy, working globally
 
 *"I partner with brands worldwide to build high-converting, goal-oriented websites that boost engagement, drive growth, and deliver measurable results."*
 
-<Remaining:>
-    -Use CTA - Call To Action
-    -Dark Mode Button
-    -Media Queries & Browser Compatibility
-    -Other pages
-    -Translate to Italian
-    -Animations with JS or CSS only; keyframes
-    -Little design icons like arrows or cute stickers
-    -At the bottom a button that scrolls up to home: Turn Back to Home
-    -Refresh
-    -Add hover effects inside media queries like scale etc.
 
-<To be checked after finishing:>
-    -Github deployement dimensions and proportions
-    -Fonts & Images
 
 
