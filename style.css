@@ -206,7 +206,7 @@
             margin-left: var(--nav-bar-logo_margin-left);
         }
 
-        #darkMode{
+        #darkMode {
             overflow: hidden;
             height: 70px;
             width: 70px;
@@ -215,16 +215,32 @@
             transition: 0.2s ease-out;
         }
 
-        #darkMode_image{
+        #darkMode_image {
             width: 100%;
             height: 100%;
             object-fit: contain;
         }
 
-        #darkMode:hover{
-            filter: grayscale(1);
+        #darkMode:hover {
+            filter: grayscale(1) contrast(1.5);
             transform: scale(1.1);
-            color:red;
+            color: red;
+        }
+
+        #translate {
+            height: var(--contact_text_height);
+            width: 100px;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            transition: 0.3s ease-out;
+            background: transparent;
+            border-radius: 45px;
+            border: none;
+        }
+
+        #translate:hover {
+            box-shadow:  5px 5px 8px var(--oxford-blue);
         }
 
         #scrollToBottom {
@@ -237,7 +253,7 @@
             overflow: hidden;
             margin-right: var(--scrollToBottom_margin-right);
             border-radius: 45px;
-            box-shadow: 0 0px 10px rgba(1, 35, 61, 0.8);
+            box-shadow: 5px 5px 8px rgba(1, 35, 61, 1);
         }
 
         #button_fill_contact {

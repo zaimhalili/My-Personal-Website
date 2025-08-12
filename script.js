@@ -9,8 +9,29 @@
 //         el.classList.add('animated');
 //     });
 // });
+
+let tr_to_IT = false;
+
 function translateToItalian() {
-    alert("Italian")
+    if (tr_to_IT) {
+        tr_to_IT = false;
+        document.getElementById('language').innerText = "ENG";
+        document.getElementById('contact_text').innerText = "CONTACT";
+        document.getElementById('home-title').innerText = "Digital Designer & Webflow Developer";
+        document.getElementById('home-description').innerText = "I'm Zaim Halili, a digital designer and Webflow developer — I partner with brands worldwide to build high-converting, goal-oriented websites that boost engagement, drive growth, and deliver measurable results."
+        for (let i = 1; i < 4; i++) {
+            document.getElementById('case' + i).innerText = "CASE STUDY 0" + i;
+        }
+        let caseTitle = document.getElementsByClassName('case-title');
+        caseTitle[0].innerText = "Find The Color";
+        caseTitle[1].innerText = "My Bookshelf";
+        caseTitle[2].innerText = "Life Is Temporary";
+    } else {
+        tr_to_IT = true;
+        document.getElementById('language').innerText = "IT";
+        document.getElementById('contact_text').innerText = "CONTATTI";
+    }
+
 }
 
 function darkMode() {
