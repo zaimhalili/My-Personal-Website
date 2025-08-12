@@ -627,6 +627,10 @@
 
 @layer mediaQueries {
     @media screen and (max-width: 480px) {
+        body{
+            overflow-x: hidden;
+            max-width: 480px;
+        }
         @layer nav-bar {
             #nav-bar {
                 height: calc(var(--nav-bar_height) / 2);
@@ -882,6 +886,12 @@
 
             .social-media-icon {
                 margin-bottom: 20px;
+                height: calc(var(--socialM-icon_height) - 10px);
+                width: calc(var(--socialM-icon_width) - 10px);
+            }
+
+            .social-media-icon:hover{
+                background: linear-gradient(0deg, #515BD4, #8134AF, #DD2A7B #F58529, #FEDA77);
             }
 
             #final-hook {
@@ -895,6 +905,7 @@
 
             #getintouch_gmail_anchor {
                 padding-bottom: 70px;
+                margin-bottom: 10px;
             }
         }
     }
