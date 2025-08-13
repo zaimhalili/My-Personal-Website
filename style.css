@@ -5,17 +5,28 @@
         --c-blue: #006eff;
         --c-blue-light: #c3e1ff;
         --raisin-black: #1b1725ff;
-        --oxford-blue: rgb(1, 35, 61);
-        --lapis-lazuli: rgb(3, 94, 123);
-        --atomic-tangerine: rgb(250, 140, 76);
+        --oxford-blue: #01233d;
+        --lapis-lazuli: #035e7b;
+        --atomic-tangerine: #fa8c4c;
         --french-gray: #c7cedbff;
-
-        --black: #000505ff;
         --space-cadet: #3b3355ff;
         --ultra-violet: #5d5d81ff;
         --columbia-blue: #bfcde0ff;
         --white: #efefef;
+    }
 
+    .dark-mode {
+        --c-blue-light: #c3e1ff;
+        --raisin-black: #efefef;
+        --oxford-blue: #c7cedbff;
+        --lapis-lazuli: #5d5d81ff;
+        --atomic-tangerine: #fa8c4c;
+        --french-gray: #c7cedbff;
+        --black: #000505ff;
+        --space-cadet: #5d5d81ff;
+        --ultra-violet: #3b3355ff;
+        --columbia-blue: #bfcde0ff;
+        --white: #1b1725ff;
     }
 }
 
@@ -24,7 +35,7 @@
         :root {
             /* Nav Bar */
             --nav-bar_height: 120px;
-            --nav-bar-logo_width-height: 80px;
+            --nav-bar-logo_width-height: 60px;
             --nav-bar-logo_margin-left: 120px;
             /* Scroll to Bottom Button*/
             --scrollToBottom_width: 150px;
@@ -44,7 +55,7 @@
             /* Hook Home Title */
             --home-title_height: 300px;
             --home-title_width: 70%;
-            --home-title_letter_spacing: -5px;
+            --home-title_letter_spacing: -3px;
             /* Hook Home Description */
             --home-description_height: 200px;
             --home-description_width: 40%;
@@ -200,10 +211,10 @@
         #nav-bar_logo {
             width: var(--nav-bar-logo_width-height);
             height: var(--nav-bar-logo_width-height);
-            display: inherit;
-            justify-self: flex-start;
-            align-self: center;
+            display: flex;
             margin-left: var(--nav-bar-logo_margin-left);
+            border-radius: 40%;
+            background-color: #efefef;
         }
 
         #darkMode {
@@ -214,6 +225,7 @@
             border: 0;
             transition: 0.2s ease-out;
             filter: grayscale(1) contrast(1.5);
+            cursor: pointer;
         }
 
         #darkMode_image {
@@ -233,14 +245,16 @@
             font-size: 20px;
             font-weight: 500;
             font-family: 'Inter', sans-serif;
-            transition: 0.3s ease-out;
-            background: transparent;
+            transition: 0.3s ease-in-out;
+            background-color: var(--white);
             border-radius: 45px;
-            border: none;
+            border: 1px solid var(--raisin-black);
+            color: var(--raisin-black);
+            cursor: pointer;
         }
 
         #translate:hover {
-            box-shadow:  5px 5px 8px var(--oxford-blue);
+            box-shadow: 0px 0px 8px var(--oxford-blue);
         }
 
         #scrollToBottom {
@@ -251,9 +265,9 @@
             height: var(--scrollToBottom_height);
             background: linear-gradient(180deg, var(--lapis-lazuli), var(--oxford-blue));
             overflow: hidden;
+            border: 1px solid var(--raisin-black);
             margin-right: var(--scrollToBottom_margin-right);
             border-radius: 45px;
-            box-shadow: 5px 5px 8px rgba(1, 35, 61, 1);
         }
 
         #button_fill_contact {
@@ -614,7 +628,7 @@
             align-self: center;
             width: var(--getInTouch-gmail-anchor_width);
             height: var(--getInTouch-gmail-anchor_height);
-            background: linear-gradient(var(--atomic-tangerine));
+            background: linear-gradient(180deg, var(--atomic-tangerine), var(--oxford-blue));
             border: 1px solid var(--raisin-black);
             color: var(--raisin-black);
             overflow: hidden;
@@ -673,10 +687,11 @@
                 margin-left: 20px;
             }
 
-            #translate{
+            #translate {
                 height: 30px;
                 width: 50px;
             }
+
             #scrollToBottom {
                 display: flex;
                 justify-items: flex-end;

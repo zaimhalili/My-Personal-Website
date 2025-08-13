@@ -49,39 +49,47 @@ const translations = {
         get_in_touch_text: "CONTATTAMI"
     }
 };
-let isItalian = localStorage.getItem("isItalian") === "true";
+// Default to Italian if no saved preference
+let savedLang = localStorage.getItem("isItalian");
+let isItalian = savedLang === null ? true : savedLang === "true";
 
 function translateIT() {
-    try {
-        isItalian = !isItalian;
-        localStorage.setItem("isItalian", isItalian.toString());
-        const lang = isItalian ? translations.IT : translations.ENG;
+    const lang = isItalian ? translations.IT : translations.ENG;
 
-        document.getElementById('language').innerText = lang.language;
-        document.getElementById('contact_text').innerText = lang.contact_text;
-        document.getElementById('home-title').innerText = lang.home_title;
-        document.getElementById('home-description').innerText = lang.home_description;
+    // Button shows opposite language
+    document.getElementById('language').innerText = isItalian ? "ENG" : "IT";
 
-        for (let i = 0; i < lang.cases.length; i++) {
-            document.getElementById('case' + (i + 1)).innerText = lang.cases[i];
-            document.getElementsByClassName('case-title')[i].innerText = lang.case_titles[i];
-            document.getElementsByClassName('case-description')[i].innerText = lang.case_descriptions[i];
-            document.getElementsByClassName('view-case')[i].innerText = lang.view_case;
-        }
+    document.getElementById('contact_text').innerText = lang.contact_text;
+    document.getElementById('home-title').innerText = lang.home_title;
+    document.getElementById('home-description').innerText = lang.home_description;
 
-        document.getElementById('about_id').innerText = lang.about_id;
-        document.getElementById('personal-description-paragraph').innerText = lang.personal_description;
-        document.getElementById('final-hook').innerText = lang.final_hook;
-        document.getElementById('get_in_touch_text').innerText = lang.get_in_touch_text;
-    } catch (error) {
-        console.error("Translation error:", error);
+    for (let i = 0; i < lang.cases.length; i++) {
+        document.getElementById('case' + (i + 1)).innerText = lang.cases[i];
+        document.getElementsByClassName('case-title')[i].innerText = lang.case_titles[i];
+        document.getElementsByClassName('case-description')[i].innerText = lang.case_descriptions[i];
+        document.getElementsByClassName('view-case')[i].innerText = lang.view_case;
     }
 
+    document.getElementById('about_id').innerText = lang.about_id;
+    document.getElementById('personal-description-paragraph').innerText = lang.personal_description;
+    document.getElementById('final-hook').innerText = lang.final_hook;
+    document.getElementById('get_in_touch_text').innerText = lang.get_in_touch_text;
 }
 
+function toggleLanguage() {
+    isItalian = !isItalian;
+    localStorage.setItem("isItalian", isItalian.toString());
+    translateIT();
+}
 
-function darkMode() {
-    alert("Dark Mode")
+// Apply saved/default language immediately after DOM is ready
+window.addEventListener("DOMContentLoaded", translateIT);
+
+
+function toggleDarkMode(){
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    localStorage.setItem("isDarkMode", isDark);
 }
 
 function scrollToBottom() {
