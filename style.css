@@ -144,6 +144,14 @@
         box-sizing: border-box;
     }
 
+    #nav-bar,
+    #hook,
+    .project-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
     body {
         background-color: var(--white);
         /* background: linear-gradient(10deg, var(--white), var(--french-gray)) fixed; */
@@ -151,7 +159,7 @@
         padding: 0;
         min-height: 100vh;
         width: 100%;
-        overflow-x: hidden;
+        overflow-x: auto;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -1018,6 +1026,16 @@
         }
 
         @layer projects {
+            #project-container {
+                width: 100%;
+                /* fill the screen */
+                max-width: 767px;
+                /* optional: keep it within viewport */
+                box-sizing: border-box;
+                /* include padding in width */
+                padding: 0 10px;
+            }
+
             .project {
                 flex-direction: column;
                 height: calc(var(--project-container_height) + 100px);
@@ -1207,6 +1225,16 @@
         }
 
         @layer projects {
+            #project-container {
+                width: 100%;
+                /* fill the screen */
+                max-width: 979px;
+                /* optional: keep it within viewport */
+                box-sizing: border-box;
+                /* include padding in width */
+                padding: 0 10px;
+            }
+
             .c-left {
                 height: 100%;
                 width: 40%;
@@ -1362,6 +1390,24 @@
             #home-description {
                 width: calc(var(--home-description_width) + 200px);
                 padding-top: calc(var(--home-description_padding-top) - 40px);
+            }
+
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+                /* safety */
+                box-sizing: border-box;
+            }
+
+            #nav-bar,
+            #project-container {
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                padding: 0 15px;
+                /* optional spacing */
             }
         }
 
