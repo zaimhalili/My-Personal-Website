@@ -85,12 +85,22 @@ function toggleLanguage() {
 // Apply saved/default language immediately after DOM is ready
 window.addEventListener("DOMContentLoaded", translateIT);
 
-
-function toggleDarkMode(){
+// On button click: toggle mode and save
+function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
     const isDark = document.body.classList.contains("dark-mode");
     localStorage.setItem("isDarkMode", isDark);
 }
+
+// On page load: read saved preference and apply
+window.addEventListener("DOMContentLoaded", () => {
+    const saved = localStorage.getItem("isDarkMode");
+    if (saved === "true") {
+        document.body.classList.add("dark-mode");
+    } else {
+        document.body.classList.remove("dark-mode");
+    }
+});
 
 function scrollToBottom() {
     window.scrollTo({
