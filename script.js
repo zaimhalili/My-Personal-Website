@@ -109,7 +109,13 @@ function scrollToBottom() {
     });
 }
 
-
+const viewportWidth = window.innerWidth;
+[...document.querySelectorAll('*')].forEach(el => {
+    const elWidth = el.getBoundingClientRect().width;
+    if (elWidth > viewportWidth) {
+        console.log('Overflowing element:', el, 'Width:', elWidth);
+    }
+}); 
 
 // <Remaining:>
 //     -Dark Mode Button

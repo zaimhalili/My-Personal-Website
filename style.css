@@ -387,6 +387,12 @@
             color: var(--space-cadet);
         }
 
+        #case1,
+        #case2,
+        #case3 {
+            padding: 0;
+        }
+
         .case-title {
             font-size: 55px;
             letter-spacing: -4px;
@@ -686,6 +692,14 @@
 
             #nav-bar_logo {
                 margin-left: 20px;
+                height: 30px;
+                width: 30px;
+            }
+
+            #darkMode_image {
+                padding-top: 1px;
+                height: 40px;
+                width: 40px;
             }
 
             #translate {
@@ -762,7 +776,7 @@
                 width: 100%;
                 padding-top: 0;
                 text-align: center;
-                font-size: 20px;
+                font-size: 19px;
                 margin-top: 0;
                 padding: 0 30px 0 30px;
             }
@@ -771,6 +785,13 @@
         @layer projects {
             #project-container {
                 margin-top: -20px;
+                width: 100%;
+                /* fill the screen */
+                max-width: 481px;
+                /* optional: keep it within viewport */
+                box-sizing: border-box;
+                /* include padding in width */
+                padding: 0 10px;
             }
 
             .project {
@@ -870,6 +891,7 @@
         }
 
         @layer bottom {
+
             #personal-details {
                 display: flex;
                 flex-direction: column;
@@ -933,7 +955,9 @@
             }
 
             #contact-me-container {
-                margin-top: 100px;
+                margin: 100px 30px 0 30px;
+                width: calc(100vw - 60px);
+                height: auto;
                 padding-bottom: 0px;
             }
 
