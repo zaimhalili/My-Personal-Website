@@ -799,7 +799,7 @@
                 /* optional: keep it within viewport */
                 box-sizing: border-box;
                 /* include padding in width */
-                padding: 0 10px;
+                padding: 0;
             }
 
             .project {
@@ -1033,7 +1033,7 @@
                 /* optional: keep it within viewport */
                 box-sizing: border-box;
                 /* include padding in width */
-                padding: 0 10px;
+                padding: 0;
             }
 
             .project {
@@ -1232,7 +1232,7 @@
                 /* optional: keep it within viewport */
                 box-sizing: border-box;
                 /* include padding in width */
-                padding: 0 10px;
+                padding: 0;
             }
 
             .c-left {
@@ -1406,7 +1406,7 @@
                 width: 100%;
                 max-width: 100%;
                 box-sizing: border-box;
-                padding: 0 15px;
+                padding: 0;
                 /* optional spacing */
             }
         }
