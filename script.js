@@ -10,29 +10,75 @@
 //     });
 // });
 
-let tr_to_IT = false;
 
-function translateToItalian() {
-    if (tr_to_IT) {
-        tr_to_IT = false;
-        document.getElementById('language').innerText = "ENG";
-        document.getElementById('contact_text').innerText = "CONTACT";
-        document.getElementById('home-title').innerText = "Digital Designer & Webflow Developer";
-        document.getElementById('home-description').innerText = "I'm Zaim Halili, a digital designer and Webflow developer — I partner with brands worldwide to build high-converting, goal-oriented websites that boost engagement, drive growth, and deliver measurable results."
-        for (let i = 1; i < 4; i++) {
-            document.getElementById('case' + i).innerText = "CASE STUDY 0" + i;
-        }
-        let caseTitle = document.getElementsByClassName('case-title');
-        caseTitle[0].innerText = "Find The Color";
-        caseTitle[1].innerText = "My Bookshelf";
-        caseTitle[2].innerText = "Life Is Temporary";
-    } else {
-        tr_to_IT = true;
-        document.getElementById('language').innerText = "IT";
-        document.getElementById('contact_text').innerText = "CONTATTI";
+let isItalian = false;
+
+const translations = {
+    ENG: {
+        language: "ENG",
+        contact_text: "CONTACT",
+        home_title: "Digital Designer & Webflow Developer",
+        home_description: "I'm Zaim Halili, a digital designer and Webflow developer — I partner with brands worldwide to build high-converting, goal-oriented websites that boost engagement, drive growth, and deliver measurable results.",
+        cases: ["CASE STUDY 01", "CASE STUDY 02", "CASE STUDY 03"],
+        case_titles: ["Find The Color", "My Bookshelf", "Life Is Temporary"],
+        case_descriptions: [
+            "A color palette generator where you choose or randomize a hex code; colors appear in bars with displayed hex values.",
+            "Add books you've read, write comments, and view summaries, main characters, page count, covers, and fan art of key scenes.",
+            "Daily gratitude journal: write three reasons you're grateful for someone, upload an image, and view entries as visual memory blocks."
+        ],
+        view_case: "View Case Study",
+        about_id: "ABOUT",
+        personal_description: "Builder at heart, deep into design, tech, and the web. Obsessed with clean UI, smart UX, and bold results.\n\nOver 2 years crafting digital experiences — efficient, structured, and impact-first. I design with clarity, develop with intent, and keep users and business goals at the center.\n\nBased in Italy, working globally.",
+        final_hook: "Looking for a Webflow Developer?",
+        get_in_touch_text: "GET IN TOUCH"
+    },
+    IT: {
+        language: "IT",
+        contact_text: "CONTATTI",
+        home_title: "Designer Digitale & Sviluppatore Webflow",
+        home_description: "Sono Zaim Halili, designer digitale e sviluppatore Webflow — collaboro con brand in tutto il mondo per creare siti web ad alte prestazioni che aumentano il coinvolgimento, stimolano la crescita e producono risultati concreti.",
+        cases: ["CASO STUDIO 01", "CASO STUDIO 02", "CASO STUDIO 03"],
+        case_titles: ["Trova il Colore", "La Mia Libreria", "La Vita è Temporanea"],
+        case_descriptions: [
+            "Generatore di palette colori dove puoi scegliere o randomizzare un codice hex; i colori appaiono in barre con il valore esadecimale.",
+            "Aggiungi libri letti, scrivi commenti e visualizza riassunti, personaggi principali, numero di pagine, copertine e fan art delle scene chiave.",
+            "Diario della gratitudine: scrivi tre motivi per cui sei grato a qualcuno, carica un'immagine e visualizza le voci come blocchi visivi di memoria."
+        ],
+        view_case: "Vedi Caso Studio",
+        about_id: "CHI SONO",
+        personal_description: "Costruttore nel cuore, appassionato di design, tecnologia e web. Ossessionato da UI pulite, UX intelligenti e risultati concreti.\n\nOltre 2 anni a creare esperienze digitali — efficienti, strutturate e orientate all'impatto. Progetto con chiarezza, sviluppo con intenzione e tengo al centro utenti e obiettivi di business.\n\nBasato in Italia, lavoro a livello globale.",
+        final_hook: "Cerchi uno Sviluppatore Webflow?",
+        get_in_touch_text: "CONTATTAMI"
     }
+};
 
+function translateIT() {
+    try {
+        isItalian = !isItalian;
+        const lang = isItalian ? translations.IT : translations.ENG;
+
+        document.getElementById('language').innerText = lang.language;
+        document.getElementById('contact_text').innerText = lang.contact_text;
+        document.getElementById('home-title').innerText = lang.home_title;
+        document.getElementById('home-description').innerText = lang.home_description;
+
+        for (let i = 0; i < lang.cases.length; i++) {
+            document.getElementById('case' + (i + 1)).innerText = lang.cases[i];
+            document.getElementsByClassName('case-title')[i].innerText = lang.case_titles[i];
+            document.getElementsByClassName('case-description')[i].innerText = lang.case_descriptions[i];
+            document.getElementsByClassName('view-case')[i].innerText = lang.view_case;
+        }
+
+        document.getElementById('about_id').innerText = lang.about_id;
+        document.getElementById('personal-description-paragraph').innerText = lang.personal_description;
+        document.getElementById('final-hook').innerText = lang.final_hook;
+        document.getElementById('get_in_touch_text').innerText = lang.get_in_touch_text;
+    } catch (error) {
+        console.error("Translation error:", error);
+    }
+    
 }
+
 
 function darkMode() {
     alert("Dark Mode")
