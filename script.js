@@ -11,8 +11,6 @@
 // });
 
 
-let isItalian = false;
-
 const translations = {
     ENG: {
         language: "ENG",
@@ -51,10 +49,12 @@ const translations = {
         get_in_touch_text: "CONTATTAMI"
     }
 };
+let isItalian = localStorage.getItem("isItalian") === "true";
 
 function translateIT() {
     try {
         isItalian = !isItalian;
+        localStorage.setItem("isItalian", isItalian.toString());
         const lang = isItalian ? translations.IT : translations.ENG;
 
         document.getElementById('language').innerText = lang.language;
@@ -76,7 +76,7 @@ function translateIT() {
     } catch (error) {
         console.error("Translation error:", error);
     }
-    
+
 }
 
 

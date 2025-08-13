@@ -213,6 +213,7 @@
             background-color: transparent;
             border: 0;
             transition: 0.2s ease-out;
+            filter: grayscale(1) contrast(1.5);
         }
 
         #darkMode_image {
@@ -222,9 +223,8 @@
         }
 
         #darkMode:hover {
-            filter: grayscale(1) contrast(1.5);
+            filter: grayscale(0) contrast(1.5);
             transform: scale(1.1);
-            color: red;
         }
 
         #translate {
@@ -673,6 +673,10 @@
                 margin-left: 20px;
             }
 
+            #translate{
+                height: 30px;
+                width: 50px;
+            }
             #scrollToBottom {
                 display: flex;
                 justify-items: flex-end;
