@@ -133,6 +133,9 @@ personalDescriptionAn.forEach((el) => observer.observe(el));
 const projectIMGdisplay = document.querySelectorAll('.project-img-display');
 projectIMGdisplay.forEach((el) => observer.observe(el));
 
+const personalImage = document.querySelectorAll('.personal-image');
+personalImage.forEach((el) => observer.observe(el));
+
 
 
 //Check Overflowing Elements
