@@ -1,14 +1,14 @@
-// window.onbeforeunload = function () {
-//     window.scrollTo(0, 0);
-// };
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
 
-// window.addEventListener("load", () => {
-//     document.querySelectorAll('.animated').forEach((el) => {
-//         el.classList.remove('animated');
-//         void el.offsetWidth; // Trigger reflow
-//         el.classList.add('animated');
-//     });
-// });
+window.addEventListener("load", () => {
+    document.querySelectorAll('.animated').forEach((el) => {
+        el.classList.remove('animated');
+        void el.offsetWidth; // Trigger reflow
+        el.classList.add('animated');
+    });
+});
 
 
 const translations = {
@@ -109,6 +109,23 @@ function scrollToBottom() {
     });
 }
 
+//Animate text
+const obeserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const textAn = document.querySelectorAll('.case-title');
+textAn.forEach((el) => obeserver.observe(el));
+
+
+//Check Overflowing Elements
 const viewportWidth = window.innerWidth;
 [...document.querySelectorAll('*')].forEach(el => {
     const elWidth = el.getBoundingClientRect().width;
@@ -118,11 +135,5 @@ const viewportWidth = window.innerWidth;
 }); 
 
 // <Remaining:>
-//     -Dark Mode Button
 //     -Other pages
-//     -Translate to Italian
-//     -Animations with JS or CSS only; keyframes
 //     -At the bottom a button that scrolls up to home: Turn Back to Home
-//     -Refresh
-
-//     <To be checked after finishing:></To>
