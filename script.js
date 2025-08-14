@@ -160,3 +160,5 @@ const viewportWidth = window.innerWidth;
 // <Remaining:>
 //     -Other pages
 //     -At the bottom a button that scrolls up to home: Turn Back to Home
+//      -For the future: 
+//          -add spans for word animations
