@@ -110,6 +110,7 @@ function scrollToBottom() {
 }
 
 //Animate text
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
@@ -120,10 +121,6 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
-
-const caseTitleAn = document.querySelectorAll('.case-title');
-caseTitleAn.forEach((el) => observer.observe(el));
-
 const caseDescriptionAn = document.querySelectorAll('.case-description');
 caseDescriptionAn.forEach((el) => observer.observe(el));
 
@@ -135,6 +132,9 @@ projectIMGdisplay.forEach((el) => observer.observe(el));
 
 const personalImage = document.querySelectorAll('.personal-image');
 personalImage.forEach((el) => observer.observe(el));
+
+const homeDescription = document.querySelectorAll('.home-description');
+homeDescription.forEach((el) => observer.observe(el));
 
 
 
