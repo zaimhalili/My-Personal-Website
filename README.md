@@ -2,7 +2,7 @@
 
 A clean, responsive portfolio website showcasing my work as a digital designer and Webflow developer.
 
-![Portfolio Preview](assets/images/Logo.png)
+<!-- ![Portfolio Preview](assets/images/Logo.png) -->
 
 ## 🚀 Features
 
