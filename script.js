@@ -158,6 +158,8 @@ const viewportWidth = window.innerWidth;
 });
 
 // <Remaining:>
+//     -SEO
+//     -New Animations
 //     -Other pages
 //     -At the bottom a button that scrolls up to home: Turn Back to Home
 //      -For the future: 
