@@ -110,7 +110,7 @@ function scrollToBottom() {
 }
 
 //Animate text
-const obeserver = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
         if (entry.isIntersecting) {
@@ -121,8 +121,18 @@ const obeserver = new IntersectionObserver((entries) => {
     });
 });
 
-const textAn = document.querySelectorAll('.case-title');
-textAn.forEach((el) => obeserver.observe(el));
+const caseTitleAn = document.querySelectorAll('.case-title');
+caseTitleAn.forEach((el) => observer.observe(el));
+
+const caseDescriptionAn = document.querySelectorAll('.case-description');
+caseDescriptionAn.forEach((el) => observer.observe(el));
+
+const personalDescriptionAn = document.querySelectorAll('.personal-description');
+personalDescriptionAn.forEach((el) => observer.observe(el));
+
+const projectIMGdisplay = document.querySelectorAll('.project-img-display');
+projectIMGdisplay.forEach((el) => observer.observe(el));
+
 
 
 //Check Overflowing Elements
@@ -132,7 +142,7 @@ const viewportWidth = window.innerWidth;
     if (elWidth > viewportWidth) {
         console.log('Overflowing element:', el, 'Width:', elWidth);
     }
-}); 
+});
 
 // <Remaining:>
 //     -Other pages

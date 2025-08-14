@@ -415,19 +415,18 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             opacity: 0;
-            transition: all 1.2s;
+            transition: all 1s;
             filter: blur(5px);
             transform: translateX(-100%);
         }
 
-        .show {
-            opacity: 1;
-            filter: none;
-            transform: translateX(0);
-        }
 
-        @media(prefers-reduced-motion){
-            .case-title{
+
+        @media(prefers-reduced-motion) {
+
+            .case-title,
+            .case-description,
+            .personal-description {
                 transition: none;
             }
         }
@@ -441,6 +440,15 @@
             justify-self: flex-start;
             text-align: left;
             margin-top: var(--case-description_margin-top);
+            transition: all 1s;
+            filter: blur(5px);
+            transform: translateX(-100%);
+        }
+
+        .show {
+            opacity: 1;
+            filter: none;
+            transform: translateX(0);
         }
 
         .view-case {
@@ -500,11 +508,19 @@
         .project-img-display {
             width: 100%;
             height: 100%;
-            transition: 0.3s ease-in-out;
             object-fit: cover;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             z-index: -1;
             display: block;
+            transition: all 1.5s;
+            filter: blur(4px);
+            transform: scale(0.1) rotate(180deg);
+            opacity: 0;
+        }
+
+        .show{
+            filter: none;
+            transform: scale(1) rotate(0);
+            opacity: 1;
         }
 
         .project-img-hidden {
@@ -522,7 +538,6 @@
             left: 0;
         }
     }
-
 }
 
 @layer bottom {
@@ -583,6 +598,18 @@
             padding-left: var(--personal-description_padding-left);
             font-size: 25px;
             font-weight: 500;
+        }
+
+        .personal-description {
+            transition: all 1.5s;
+            filter: blur(5px);
+            transform: translateX(100%);
+        }
+
+        .show {
+            opacity: 1;
+            filter: none;
+            transform: translateX(0);
         }
     }
 
