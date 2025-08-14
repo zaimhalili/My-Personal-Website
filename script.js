@@ -121,6 +121,13 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
+
+const homeTitle = document.querySelectorAll('.home-title');
+homeTitle.forEach((el) => observer.observe(el));
+
+const caseTitleAn = document.querySelectorAll('.case-title');
+caseTitleAn.forEach((el) => observer.observe(el));
+
 const caseDescriptionAn = document.querySelectorAll('.case-description');
 caseDescriptionAn.forEach((el) => observer.observe(el));
 
@@ -135,6 +142,9 @@ personalImage.forEach((el) => observer.observe(el));
 
 const homeDescription = document.querySelectorAll('.home-description');
 homeDescription.forEach((el) => observer.observe(el));
+
+const finalHook = document.querySelectorAll('.final-hook');
+finalHook.forEach((el) => observer.observe(el));
 
 
 
